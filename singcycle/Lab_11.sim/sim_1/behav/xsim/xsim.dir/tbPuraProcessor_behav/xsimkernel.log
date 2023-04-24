@@ -1,0 +1,7 @@
+Running: xsim.dir/tbPuraProcessor_behav/xsimk.exe -simmode gui -wdb tbPuraProcessor_behav.wdb -simrunnum 0 -socket 50977
+Design successfully loaded
+Design Loading Memory Usage: 6468 KB (Peak: 6468 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 15352 KB (Peak: 15352 KB)
+Simulation CPU Usage: 2812 ms

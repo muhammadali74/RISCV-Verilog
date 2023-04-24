@@ -1,0 +1,63 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/ALU_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/CA_Lab10/CA_Lab10/CA_Lab10.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/CA_Lab10/CA_Lab10/CA_Lab10.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/CA_Lab8/CA_Lab8.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/needs/Downloads/HU-CA-Project-main/HU-CA-Project-main/Source/Pipelined-Processor/EXMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/needs/Downloads/HU-CA-Project-main/HU-CA-Project-main/Source/Pipelined-Processor/IDEX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/needs/Downloads/HU-CA-Project-main/HU-CA-Project-main/Source/Pipelined-Processor/IFID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/CALab05/CALab05/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/CALab05/CALab05/InsParser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InsParser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/CA_Lab8/CA_Lab8.srcs/sources_1/new/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/needs/Downloads/HU-CA-Project-main/HU-CA-Project-main/Source/Pipelined-Processor/MEMWB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/CALab05/CALab05/Mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/YDrLoZ/Instruction_Memory/Instruction_Memory.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-311] analyzing module pc_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PuraProcessor
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PcOut_InstAddr' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:50]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Instr' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:51]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'OpCode' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:52]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rs1' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:55]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rs2' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:56]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rd' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:57]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ReadData1' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:58]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ReadData2' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:59]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'WriteData' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:60]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ImmData' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:61]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'AluResult' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:63]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ReadMemData' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:64]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Branch' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:66]
+WARNING: [VRFC 10-3028] 'Branch' was previously declared with a range [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:66]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ALUOp' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:67]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Operation' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:68]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'branch_dec' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:70]
+WARNING: [VRFC 10-3028] 'branch_dec' was previously declared with a range [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:70]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Arr1' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:75]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Arr2' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:76]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Arr3' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:77]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Arr4' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:78]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Arr5' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:79]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Arr6' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:80]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Branch_exmem_out' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:105]
+WARNING: [VRFC 10-3028] 'Branch_exmem_out' was previously declared with a range [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:105]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Zero_exmem_out' is not allowed [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:111]
+WARNING: [VRFC 10-3028] 'Zero_exmem_out' was previously declared with a range [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:111]
+INFO: [VRFC 10-2458] undeclared symbol AluSrc_out, assumed default net type wire [D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/new/PuraProcessor.v:155]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sources_1/imports/Desktop/Lab7/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module registerFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/Pipelined/Lab_11.srcs/sim_1/new/TASK2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPuraProcessor

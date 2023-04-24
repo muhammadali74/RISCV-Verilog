@@ -1,0 +1,32 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/new/ALU_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/imports/Desktop/CA_Lab10/CA_Lab10/CA_Lab10.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/new/CU_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/imports/Desktop/CA_Lab10/CA_Lab10/CA_Lab10.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/imports/Desktop/CA_Lab8/CA_Lab8.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/needs/Downloads/HU-CA-Project-main/HU-CA-Project-main/Source/Pipelined-Processor/EXMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/new/ForwardingUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/new/HazardDetection.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HazardDetection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/needs/Downloads/HU-CA-Project-main/HU-CA-Project-main/Source/Pipelined-Processor/IDEX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/needs/Downloads/HU-CA-Project-main/HU-CA-Project-main/Source/Pipelined-Processor/IFID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/imports/Desktop/CALab05/CALab05/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/imports/Desktop/CALab05/CALab05/InsParser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InsParser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/imports/Desktop/CA_Lab8/CA_Lab8.srcs/sources_1/new/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/needs/Downloads/HU-CA-Project-main/HU-CA-Project-main/Source/Pipelined-Processor/MEMWB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive - Habib University/HABIB/Semester-4/Computer Architecture/Project/detetionunited/Lab_11.srcs/sources_1/imports/Desktop/CALab05/CALab05/Mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Mux2
+INFO: [VRFC 10-311] analyzing module Mux3
