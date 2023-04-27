@@ -5,6 +5,7 @@ module Instruction_Memory
 	output reg [31:0] Instruction
 );
 	reg [7:0] inst_mem [150:0];
+	integer i;
 	
 	initial
 	begin
@@ -25,7 +26,7 @@ module Instruction_Memory
 //		inst_mem[14]=8'b10010101;
 //		inst_mem[15]=8'b00000010;
 
-        //addi x11, x0, 6
+  //      addi x11, x0, 6
 		inst_mem[0]=8'b10010011;
 		inst_mem[1]=8'b00000101;
 		inst_mem[2]=8'b01100000;
@@ -157,6 +158,8 @@ module Instruction_Memory
 		inst_mem[86]=8'b00000101;
 		inst_mem[87]=8'b00010000;
 		
+		
+		
 		//blt x15 x16 28
 		inst_mem[88]=8'b01100011;
 		inst_mem[89]=8'b11001110;
@@ -246,6 +249,23 @@ module Instruction_Memory
 		inst_mem[145]=8'b00001100;
 		inst_mem[146]=8'b00000000;
 		inst_mem[147]=8'b11111100;
+
+//    	inst_mem[0]=8'b10110011;
+//		inst_mem[1]=8'b00000000;
+//		inst_mem[2]=8'b00110001;
+//		inst_mem[3]=8'b0;
+		
+		
+//		inst_mem[4]=8'b00110011;
+//		inst_mem[5]=8'b10000010;
+//		inst_mem[6]=8'b00100000;
+//		inst_mem[7]=8'b0;
+		
+
+//		inst_mem[8]=8'b10110011;
+//		inst_mem[9]=8'b00000010;
+//		inst_mem[10]=8'b0010010;
+//		inst_mem[11]=8'b0;
 	end
 	
 	

@@ -236,17 +236,18 @@ module PuraProcessor(
     [6:0] OpCode,
     [7:0] Arr1,
     [7:0] Arr2,
-    [7:0] Arr3,
     [7:0] Arr4,
     [7:0] Arr5,
+    [7:0] Arr3,
     [7:0] Arr6,
+    
     branch_dec, [4:0] rd_memwb_out,
     [63:0] Result_memwb_out,
     MemtoReg_memwb_out,
     RegWrite_memwb_out,
     [63:0] alu1,
     [63:0] Mux_Alu, [1:0] fwdb,
-    Branch_exmem_out, Zero_exmem_out
+    Branch_exmem_out, Zero_exmem_out, [1:0] fwda
     
     );
     wire [63:0]PC_in;
@@ -329,6 +330,12 @@ module PuraProcessor(
    wire [63:0] alu1;
    wire [63:0] alu2;
    
+   wire pos; 
+   wire pos_mem;
+   wire [2:0] f3_idex;
+   wire [2:0] funct_mem;
+//   wire beq,bne,bge,blt;
+   
    HazardDetection hd(rs1, rs2, rd_out, MemRead_out, pcwrite, CU_mux_ctrl, ifid_write);
    
    CU_mux cmx(CU_mux_ctrl, Branch, MemRead, MemReg, MemWrite, AluSrc, RegWrite, ALUOp, Branch_mux, MemRead_mux, MemtoReg_mux, MemWrite_mux, ALUSrc_mux, RegWrite_mux, ALUOp_mux);
@@ -339,6 +346,7 @@ module PuraProcessor(
    
 //    branch_decision bd(Branch_exmem_out, Zero_exmem_out, branch_dec);
     assign branch_dec = Branch_exmem_out & Zero_exmem_out;
+//    branch_module bm(Zero_exmem_out, pos_mem, Branch_exmem_out, funct_mem, branch_dec, beq,bne,bge,blt);
 //    assign branch_dec = ((~Instr[30] & Instr[14] & ~Instr[13] & ~Instr[12]) & (ReadData1 < ReadData2 ? 1:0) & Branch) | (Branch & (ReadData1 == ReadData2) & ~(~Instr[30] & Instr[14] & ~Instr[13] & ~Instr[12]));
     
     Mux3 forwarda(ReadData1_out, WriteData, Result_exmem_out, fwda, alu1);
@@ -354,17 +362,17 @@ module PuraProcessor(
     Mux2 branch(Four_add,Branchadd_out,branch_dec,PC_in);
     Instruction_Memory Mem(ifid_pcin,ifid_instr);
     
-    IFID ifid(clk, branch_dec, ifid_pcin, ifid_instr, Instr, PcOut_InstAddr,ifid_write);
+    IFID ifid(clk, reset, ifid_pcin, ifid_instr, Instr, PcOut_InstAddr,ifid_write, branch_dec);
     
-    IDEX idex(clk, branch_dec, {Instr[30], Instr[14:12]}, ALUOp_mux, MemtoReg_mux, RegWrite_mux, Branch_mux, MemWrite_mux, MemRead_mux, ALUSrc_mux, ReadData1, ReadData2, rd, rs1, rs2, ImmData, PcOut_InstAddr,
+    IDEX idex(clk, reset, {Instr[30], Instr[14:12]}, ALUOp_mux, MemtoReg_mux, RegWrite_mux, Branch_mux, MemWrite_mux, MemRead_mux, ALUSrc_mux, ReadData1, ReadData2, rd, rs1, rs2, ImmData, PcOut_InstAddr,
     PC_Out, Funct_out, ALUOp_out, MemtoReg_out, RegWrite_out, Branch_out, MemWrite_out, MemRead_out, ALUSrc_out, 
-    ReadData1_out, ReadData2_out, rs1_out, rs2_out, rd_out, immdata_out);
+    ReadData1_out, ReadData2_out, rs1_out, rs2_out, rd_out, immdata_out, branch_dec, funct3, f3_idex);
     
-    EXMEM exmem(clk, branch_dec, rd_out, Branch_out, MemWrite_out, MemRead_out, MemtoReg_out, RegWrite_out, Branch_add, AluResult, Zero, ReadData2_out,
+    EXMEM exmem(clk, reset, rd_out, Branch_out, MemWrite_out, MemRead_out, MemtoReg_out, RegWrite_out, Branch_add, AluResult, Zero, alu2,
     data_out, Branchadd_out, rd_exmem_out, Branch_exmem_out, MemWrite_exmem_out, MemRead_exmem_out, MemtoReg_exmem_out,
-    RegWrite_exmem_out, Result_exmem_out, Zero_exmem_out);
+    RegWrite_exmem_out, Result_exmem_out, Zero_exmem_out, branch_dec, pos, pos_mem, f3_idex, funct_mem);
     
-    MEMWB memwb(clk, branch_dec, Result_exmem_out, ReadMemData, rd_exmem_out, MemtoReg_exmem_out, RegWrite_exmem_out, 
+    MEMWB memwb(clk, reset, Result_exmem_out, ReadMemData, rd_exmem_out, MemtoReg_exmem_out, RegWrite_exmem_out, 
     MemtoReg_memwb_out, RegWrite_memwb_out, Result_memwb_out, ReadMemData_out, rd_memwb_out);
     
     
@@ -373,7 +381,7 @@ module PuraProcessor(
     registerFile REG(clk,reset,WriteData,rs1,rs2,rd_memwb_out,RegWrite_memwb_out, ReadData1,ReadData2);
     Control_Unit CU(OpCode, Branch, MemRead,MemReg,MemWrite,AluSrc, RegWrite,ALUOp);
     Mux ALU(alu2,immdata_out,ALUSrc_out, Mux_Alu);
-    ALU_64 a64(Zero, alu1, Mux_Alu ,Operation,AluResult);
+    ALU_64 a64(Zero, alu1, Mux_Alu ,Operation,AluResult, pos);
     Data_Memory data(Result_exmem_out,data_out,clk,MemWrite_exmem_out,MemRead_exmem_out,ReadMemData, Arr1, Arr2, Arr3, Arr4, Arr5, Arr6);
     Mux wb(Result_memwb_out,ReadMemData_out,MemtoReg_memwb_out,WriteData);
     

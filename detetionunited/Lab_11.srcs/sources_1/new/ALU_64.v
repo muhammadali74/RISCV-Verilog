@@ -24,7 +24,8 @@ module ALU_64(
     input [63:0] a,
     input [63:0] b, 
     input [3:0] ALUOp,
-    output reg [63:0] Result
+    output reg [63:0] Result,
+    output reg poss
     );
     
     always @(*)
@@ -45,6 +46,7 @@ module ALU_64(
     else
     Zero = 0;
     
+    poss <= ~Result[63];
     end
     
 endmodule

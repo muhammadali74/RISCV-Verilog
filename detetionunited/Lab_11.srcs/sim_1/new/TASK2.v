@@ -57,6 +57,7 @@ module tbPuraProcessor(
     wire [1:0] fwdb;
     wire Branch_exmem_out;
     wire Zero_exmem_out;
+    wire [1:0] fwda;
     
     PuraProcessor PP(clk,reset, PcOut_InstAddr,
     Instr,
@@ -73,14 +74,14 @@ module tbPuraProcessor(
     Branch,MemRead,MemReg,MemWrite,AluSrc,RegWrite,
     ALUOp,
     Operation,OpCode, Arr1, Arr2, Arr3, Arr4, Arr5, Arr6, branch_dec, rd_memwb_out, Result_memwb_out, MemtoReg_memwb_out,
-    RegWrite_memwb_out, alu1, alu2, fwdb, Branch_exmem_out, Zero_exmem_out);
+    RegWrite_memwb_out, alu1, alu2, fwdb, Branch_exmem_out, Zero_exmem_out, fwda);
     
     initial begin
     reset=0;
     clk=0;
     end
     always 
-    #5 clk =~clk;
+    #1 clk =~clk;
     
     
 endmodule

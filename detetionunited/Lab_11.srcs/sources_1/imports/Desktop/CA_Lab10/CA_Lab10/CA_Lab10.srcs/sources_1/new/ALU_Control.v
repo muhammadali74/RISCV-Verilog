@@ -8,21 +8,24 @@ module ALU_Control
 	always @ (ALUOp or Funct)
 	begin
 		case(ALUOp)
-			2'b00: Operation = 4'b0010;
+			2'b00: Operation <= 4'b0010;
 			2'b01: 
 			begin
-			if (Funct == 4'b0100)
-			     Operation = 4'b1111;
+			if (Funct[2:0] == 3'b100)
+			     Operation <= 4'b1111;
 			else
-			     Operation = 4'b0110;
+			     Operation <= 4'b0110;
 			end
 			2'b10:
 			begin 
 			case(Funct)
-				4'b0000: Operation = 4'b0010;
-				4'b1000: Operation = 4'b0110;
-				4'b0111: Operation = 4'b0000;
-				4'b0110: Operation = 4'b0001;
+				4'b0000: Operation <= 4'b0010;
+				4'b1000: Operation <= 4'b0110;
+				4'b0111: Operation <= 4'b0000;
+				4'b0110: Operation <= 4'b0001;
+				default: begin
+				Operation <= 4'b0000;
+				end
 			endcase
 			end
 		endcase

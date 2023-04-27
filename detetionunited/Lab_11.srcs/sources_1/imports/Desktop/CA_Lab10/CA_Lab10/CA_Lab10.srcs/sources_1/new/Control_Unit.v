@@ -115,15 +115,6 @@ module Control_Unit(
     assign AluOp = 2'b01;
     end
     
-    7'b1100011: begin
-    assign AluSrc = 1'b0;
-    assign MemtoReg = 1'bx;
-    assign RegWrite = 1'b0;
-    assign MemRead  = 1'b0;
-    assign MemWrite = 1'b0;
-    assign Branch = 1'b1;
-    assign AluOp = 2'b01;
-    end
     
     7'b0010011: begin
     assign AluSrc = 1'b1;

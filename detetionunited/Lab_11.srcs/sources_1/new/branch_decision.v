@@ -1,44 +1,55 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/24/2023 06:40:52 AM
-// Design Name: 
-// Module Name: branch_decision
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+module branch_module(
+  input zero,
+  input pos,
+  input branch,
+  input [2:0] funct3,
+  output reg branch_dec,
+  output reg beq,
+  output reg bne,
+  output reg bge,
+  output reg blt
+);
 
-
-module branch_decision(
-    input branch,
-    input zero,
-    output reg dec
-    );
-    
-    
-//    initial begin
-//    dec = 1'b0;
-//    end
-    
-    always@(*)
+  always @(*)
     begin
-//    case (zero)
-//    1'b1: assign dec = branch & zero;
-//    1'b0: assign dec = branch & zero;
-//    1'bx: assign dec = 0;
-//    endcase
+      if (branch) begin
+        if (zero && funct3 == 3'b000) begin
+            beq <= 1'b1;
+            bne <= 1'b0;
+            bge <= 1'b0;
+            blt <= 1'b0;
+        end
+        else if (~zero && funct3 == 3'b001) begin
+            bne <= 1'b1;
+            beq <= 1'b0;
+            bge <= 1'b0;
+            blt <= 1'b0;
+        end
+        else if ((pos || zero) && funct3 ==3'b101) begin
+            bne <= 1'b0;
+            beq <= 1'b0;
+            bge <= 1'b1;
+            blt <= 1'b0;
+        end
+        else if ((~pos && ~zero) && funct3 ==3'b100) begin
+            bne <= 1'b0;
+            beq <= 1'b0;
+            blt <= 1'b1;
+            bge <= 1'b0;
+        end
+        else begin
+            bne <= 1'b0;
+            beq <= 1'b0;
+            blt <= 1'b0;
+            bge <= 1'b0;
+        end
+      end
+      else begin
+            bne <= 1'b0;
+            beq <= 1'b0;
+            blt <= 1'b0;
+            bge <= 1'b0;
+      end
+      branch_dec <= branch && (bne || beq || blt || bge);
     end
-    
-    
 endmodule
